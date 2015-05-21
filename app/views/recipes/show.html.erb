@@ -1,4 +1,5 @@
-<%= render 'shared/page_title', @recipe.name %>
+<%= render 'shared/page_title', title: @recipe.name %>
+
 <div class="row">
   <div class="col-md-4 pull-right center">
     <%= gravatar_for @recipe.chef, size: 200 %>
@@ -7,6 +8,9 @@
     </p>
   </div>
   <div class="col-md-8">
+    <div class="show_recipe">
+      <%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
+    </div>
     <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-right" %>
     <h3><%= @recipe.summary %></h3>
     <div class="well">
