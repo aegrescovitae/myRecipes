@@ -4,11 +4,12 @@ class PictureUploader < CarrierWave::Uploader::Base
   
   include CarrierWave::MiniMagick
   process resize_to_limit: [600, 600]
+  storage :file 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  
+  attr_reader :attr_names
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  #storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -41,7 +42,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   # For images you might use something like this:
   
   def extension_white_list
-  %w(jpg jpeg gif png)
+   %w(jpg jpeg gif png)
   end
 
   # Override the filename of the uploaded files:

@@ -3,7 +3,6 @@
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
   <%= form_for(@recipe, html: { multipart: true}) do |f| %>
-    <%= form_for @recipe do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     
@@ -12,8 +11,7 @@
     
     <%= f.label :description %>
     <%= f.text_area :description, rows: 10 %>
-  <% end %>
-    
+  
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
     </span>
@@ -27,7 +25,7 @@
   $('#recipe_picture').bind('change', function() {
     size_in_megabytes = this.files[0].size/1024/1024;
     if (size_in_megabytes > 5) {
-      alert('Maximum File size is 5MG :-(');
+      alert('Maximum File size is 5MG');
     }
   });
 </script>
