@@ -1,11 +1,11 @@
 <div class="center jumbotron">
-  <h1>Welcome to Aegresco Recipes</h1>
+  <h1>Welcome to Aegresco|Recipes</h1>
   
   <h2> 
   This is the home page for my rails Udemy project
   </h2>
   
-  <%= link_to "Sign Up!", "", class: 'btn btn-lg btn-success' %>
+  <%= link_to "Sign Up!", register_path, class: 'btn btn-lg btn-success' %>
 </div>
 <div class="row">
   <div class="col-lg-4">
@@ -17,10 +17,10 @@
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      Log in to your account
     </h3>
-    <h2 class="left">Browse and view recipes as Guest</h2>
-    <p><%= link_to "Browse Recipes", "", class: "btn btn-warning btn-small" %></p>
+    <h2 class="left">Add or update your recipes</h2>
+    <p><%= link_to "Log in", login_path, class: "btn btn-warning btn-small" %></p>
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
