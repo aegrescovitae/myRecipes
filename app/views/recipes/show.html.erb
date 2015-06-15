@@ -16,6 +16,8 @@
     <% end %>
     <h3><%= @recipe.summary %></h3>
     <div class="well">
+      <p><%= render @recipe.styles %></p>
+      <p><%= render @recipe.ingredients %></p>
       <p>
         <strong>Steps:</strong>
       </p>
